@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awakened Sorcerers - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+    <style>
+        html {
+            background-color: #000000;
+        }
+        body {
+            font-family: 'Satoshi', sans-serif;
+            position: relative;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+        
+        /* Background glows */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            z-index: -1;
+            filter: blur(150px);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        body::before {
+            width: 500px;
+            height: 500px;
+            top: -10%;
+            left: -250px;
+        }
+
+        body::after {
+            width: 600px;
+            height: 600px;
+            bottom: -15%;
+            right: -250px;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 95%), url('background.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            background: white;
+            color: black;
+        }
+        .cta-button:hover {
+            background-color: #d1d5db;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+        }
+        .glass-card {
+            background: rgba(12, 12, 12, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+        .input-field {
+            background-color: rgba(10, 10, 10, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .input-field:focus {
+            background-color: rgba(0, 0, 0, 1);
+            border-color: white;
+        }
+        .subtle-glow {
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+    
+    <!-- Hero Section -->
+    <main id="home" class="hero-bg min-h-screen flex flex-col items-center justify-center text-center p-6">
+        <div class="container mx-auto">
+             <a href="#home" class="flex items-center justify-center gap-3 mb-8">
+                <img src="logo.png" alt="Awakened Sorcerers Logo" class="w-10 h-10">
+                <h1 class="text-2xl font-bold tracking-wider text-white">AWAKENED SORCERERS</h1>
+            </a>
+            <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 subtle-glow">
+                Coming Soon
+            </h2>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-white/10">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+             <div class="flex justify-center items-center gap-3 mb-4">
+                 <h3 class="text-lg font-bold tracking-wider text-gray-400">AWAKENED SORCERERS</h3>
+             </div>
+             <p class="text-sm">&copy; 2025 Awakened Sorcerers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
